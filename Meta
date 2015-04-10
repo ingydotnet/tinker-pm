@@ -1,0 +1,29 @@
+=meta: 0.0.2
+
+name: Tinker
+version: 0.0.1
+abstract: Data Driven Testing Toolset
+homepage: https://metacpan.org/release/Tinker
+language: perl
+license: perl
+copyright: 2015
+
+author:
+  name: Ingy döt Net
+  email: ingy@cpan.org
+  homepage: http://ingy.net
+  github: ingydotnet
+  twitter: ingydotnet
+  freenode: ingy
+
+devel:
+  git: https://github.com/ingydotnet/tinker-pm
+  bug: https://github.com/ingydotnet/tinker-pm/issues
+  irc: irc.freenode.net#tinkertest
+
+requires:
+  perl: 5.8.1
+  Cog: 0
+  Mo: 0
+
+badge: travis

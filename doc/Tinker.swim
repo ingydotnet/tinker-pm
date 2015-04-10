@@ -1,0 +1,10 @@
+<<<cpan-head>>>
+
+= Synopsis
+
+  > tinker init
+  > tinker update
+  > tinker make
+  > tinker start
+
+<<<cpan-tail>>>
