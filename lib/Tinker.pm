@@ -46,4 +46,41 @@ use constant url_map => [
     ['/' => 'tinker'],
 ];
 
+sub handle_post {
+    my ($self, $env) = @_;
+    $self->env($env);
+    $self->read_json;
+    my $yaml = $env->{post_data}{input};
+    my $result = {
+        pm => $self->yaml_pm($yaml),
+        tiny => $self->yaml_tiny($yaml),
+    };
+    return [
+        200,
+        [ 'Content-Type' => 'application/json' ],
+        [ $self->json->encode($result) ]
+    ];
+}
+
+use YAML();
+use YAML::Tiny();
+use Data::Dumper();
+$Data::Dumper::Indent = 1;
+$Data::Dumper::Terse = 0;
+$Data::Dumper::Sortkeys = 1;
+
+sub yaml_pm {
+    my ($self, $yaml) = @_;
+    return eval {
+        Data::Dumper::Dumper(YAML::Load($yaml));
+    } || "$@";
+}
+
+sub yaml_tiny {
+    my ($self, $yaml) = @_;
+    return eval {
+        Data::Dumper::Dumper(YAML::Tiny::Load($yaml));
+    } || "$@";
+}
+
 1;

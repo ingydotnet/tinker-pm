@@ -21,9 +21,18 @@ $Cog.tinker = ->
     @process()
 
 $Cog.process = ->
-  $('.col2 .output').text $('.col1 .input').val().toUpperCase()
-  $('.col3 .output').text $('.col1 .input').val().toLowerCase()
+  input = $('.col1 .input').val()
+  console.log 123456
+  callback = (response)=>
+    @post_process response
+  $.post '/test/',
+    $.toJSON({input: input}),
+    callback
+
+$Cog.post_process = (response)->
   $('.col1 .input').focus()
+  $('.col2 .output').text response.pm
+  $('.col3 .output').text response.tiny
 
 $Cog.add_pane = (column, data)->
   $column = $(column)
