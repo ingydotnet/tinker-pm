@@ -1,4 +1,4 @@
 #!/usr/bin/env perl
 
-use Tinker::App;
+use Tinker;
 exit Tinker::App->new->run;
