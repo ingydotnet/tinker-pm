@@ -41,6 +41,42 @@ body {
     width: 33%;
 }
 
+.col2 .pane-a {
+    height: 50%;
+}
+
+.col2 .pane-b {
+    height: 50%;
+}
+
+.col3 .pane-a {
+    height: 50%;
+}
+
+.col3 .pane-b {
+    height: 50%;
+}
+
+.col2 .pane-a pre {
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.col2 .pane-b pre {
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.col3 .pane-a pre {
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.col3 .pane-b pre {
+    overflow-y: scroll;
+    height: 100%;
+}
+
 .column {
     padding: 5px;
 }
@@ -49,4 +85,8 @@ pre {
     font-family: monospace;
     font-size: 12px;
     font-weight: normal;
+}
+
+.pane h1 {
+    font-weight: bold;
 }
