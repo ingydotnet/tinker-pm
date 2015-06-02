@@ -85,11 +85,7 @@ sub handle_test {
             $year+1900, $mon+1, $mday, $hour, $min, $sec,
         ),
     };
-    return [
-        200,
-        [ 'Content-Type' => 'application/json' ],
-        [ $self->json->encode($result) ]
-    ];
+    $self->response_json($result);
 }
 
 sub handle_save {
@@ -98,11 +94,7 @@ sub handle_save {
     my $yaml = $self->{env}{post_data}{yaml};
     my $stamp = $self->{env}{post_data}{stamp};
     io->file("data/$stamp.yaml")->assert->print($yaml);
-    return [
-        200,
-        [ 'Content-Type' => 'application/json' ],
-        [ $self->json->encode({stamp => $stamp}) ]
-    ];
+    $self->response_json({stamp => $stamp});
 }
 
 sub yaml_pm {
