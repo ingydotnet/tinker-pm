@@ -2,4 +2,4 @@
 
 use Tinker;
 
-exit Tinker::App->new->run;
+exit Tinker::App->get_app_class(@ARGV)->new->run;
