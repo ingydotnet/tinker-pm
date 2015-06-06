@@ -15,7 +15,7 @@ Tinker - Data Driven Testing Toolset
 
 =head1 Version
 
-This document describes L<Tinker> version B<0.0.1>.
+This document describes L<Tinker> version B<0.0.2>.
 
 =head1 Synopsis
 

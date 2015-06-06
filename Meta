@@ -1,7 +1,7 @@
 =meta: 0.0.2
 
 name: Tinker
-version: 0.0.1
+version: 0.0.2
 abstract: Data Driven Testing Toolset
 homepage: https://metacpan.org/release/Tinker
 language: perl
