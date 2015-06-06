@@ -1,6 +1,6 @@
 ---
 version: 0.0.2
-date:    Fri Apr 10 15:34:56 CEST 2015
+date:    Sat Jun  6 13:17:44 PDT 2015
 changes:
 - Move YAML stuff downstream to Tinker::App::YAMLTesting
 ---
