@@ -1,7 +1,7 @@
 =meta: 0.0.2
 
 name: Tinker
-version: 0.0.2
+version: 0.0.3
 abstract: Data Driven Testing Toolset
 homepage: https://metacpan.org/release/Tinker
 language: perl
@@ -23,7 +23,7 @@ devel:
 
 requires:
   perl: 5.8.1
-  Cog: 0
-  Mo: 0
+  Cog: 0.09
+  Mo: 0.39
 
 badge: travis
