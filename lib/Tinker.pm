@@ -19,12 +19,18 @@ extends 'Cog::WebApp';
 
 use IO::All;
 
+use constant rewrite => [
+    ['^/css/images/', '/image/'],
+];
+
 use constant css_files => [qw<
     ()
     reset.css
     layout-table.css
     tinker.css
 >];
+#     jquery-ui.css
+#     theme.css
 
 use constant js_files => [qw(
     colResizable.js
